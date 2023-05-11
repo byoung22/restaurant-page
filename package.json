@@ -1,0 +1,27 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Practicing DOM manipulation by dynamically rendering a simple restaurant homepage! The goal is to use JavaScript alone to generate the entire contents of the website through webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byoung22/restaurant-page.git"
+  },
+  "author": "Bailey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byoung22/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/byoung22/restaurant-page#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.1",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
