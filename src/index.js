@@ -1,13 +1,9 @@
 import _ from 'lodash';
 import './style.css';
+import loadHeader from './header';
+import initialize from './initialize';
+import loadAbout from './about';
 
-import Logo from './Photos/logo.png';
-const myLogo = new Image();
-myLogo.src = Logo;
-
-const content = document.createElement('div');
-content.classList.add('content');
-document.body.appendChild(content);
-
-content.appendChild(myLogo);
-//#0C50B9
+initialize();
+loadHeader();
+loadAbout();
