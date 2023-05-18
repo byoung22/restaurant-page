@@ -1,10 +1,5 @@
 import food from './Photos/home.jpg';
 
-function createParagraphContainer() {
-    const paragraphContainer = document.createElement('div');
-    paragraphContainer.classList.add('container');
-    content.appendChild(paragraphContainer);
-}
 function createHeading() {
     const heading = document.createElement('h2');
     heading.textContent = 'Welcome to Baileys: A Culinary Symphony';
@@ -28,7 +23,6 @@ function createParagraph(text){
 }
 
 export default function loadAbout() {
-    createParagraphContainer();
     createImage();
     createHeading();
     createParagraph(`Baileys is an exquisite Michelin star restaurant that encapsulates the art of fine dining, where culinary craftsmanship meets unparalleled elegance. Nestled in the heart of a bustling metropolis, Baileys invites you to embark on an unforgettable gastronomic journey that transcends the boundaries of taste, texture, and presentation.`);
