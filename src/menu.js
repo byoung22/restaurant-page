@@ -6,6 +6,11 @@ import drink2 from './Photos/drink2.jpg';
 import drink3 from './Photos/drink3.jpg';
 import drink4 from './Photos/drink4.jpg';
 import drink5 from './Photos/drink5.jpg';
+import food1 from './Photos/food1.png';
+import food2 from './Photos/food2.png';
+import food3 from './Photos/food3.png';
+import food4 from './Photos/food4.png';
+import food5 from './Photos/food5.png';
 
 
 const uiRendering = {
@@ -15,11 +20,11 @@ const uiRendering = {
         ['Salad', '$45', side3, `Step into a gastronomic paradise with the Garden of Eden Salad, a vibrant creation that celebrates nature's bounty. Crisp, handpicked heirloom lettuce leaves form the lush foundation, adorned with a colorful tapestry of jewel-toned edible flowers, delicate microgreens, and an array of seasonal fruits. Tossed in a tangy champagne vinaigrette infused with hints of wild honey, this celestial salad transports your taste buds to a realm of divine freshness and exquisite flavors.`],
     ],
     foods: [
-        ['name', 'price', '.png', 'description'],
-        ['name', 'price', '.png', 'description'],
-        ['name', 'price', '.png', 'description'],
-        ['name', 'price', '.png', 'description'],
-        ['name', 'price', '.png', 'description'],
+        ['Himalayan Diamond Salmon', '$165', food1, 'A regal masterpiece featuring a fillet of salmon encrusted with crushed diamonds sourced from the majestic Himalayan peaks. The fish is gently poached in a delicate blend of champagne and white truffle oil, creating a luxurious symphony of flavors that dance on your tongue.'],
+        ['Regal A5 Wagyu Crown', '$200', food2, `Prepare to indulge in the epitome of culinary opulence with the Regal A5 Wagyu Crown. Meticulously handcrafted, this masterpiece showcases the extraordinary flavors and unparalleled tenderness of the world's most esteemed beef. A majestic cut of A5 wagyu, meticulously marbled with creamy ribbons of fat, is artfully seared to perfection, creating a seductive caramelized crust that locks in its succulent juiciness.`],
+        ['King of Steaks', '$165', food3, 'Embark on a regal gastronomic journey with the crown jewel of steaks—the King of Steaks. This extraordinary masterpiece starts with an impeccably aged prime cut of succulent beef, sourced from the most exclusive ranches known only to a privileged few. Expertly dry-aged for months, this steak embodies exceptional marbling, ensuring a buttery tenderness that rivals celestial velvet. This royal steak is then kissed by a flame of pure gold, searing the surface to perfection and creating a caramelized crust that locks in the flavors within.'],
+        ['Ruby Beetroot', '$150', food4, `Prepare to be enchanted by the resplendent flavors and vibrant hues of the Ruby Beetroot. A medley of hand-picked heirloom beetroots, each a jewel of nature's palette, takes center stage in this gastronomic masterpiece. The beetroots, gently roasted to unleash their natural sweetness, are elegantly arranged on a canvas of whipped goat cheese and toasted hazelnut crumble.`],
+        ['Garden Harvest Artisanal Bread', '$165', food5, `Experience a symphony of flavors with the Garden Harvest Artisanal Bread. This artisanal bread is a fusion of crusty perfection and soft crumb, bursting with the essence of sun-ripened vegetables. Roasted bell peppers, caramelized onions, and charred zucchini create a delightful crunch within the tender loaf. Infused with hand-picked herbs and a drizzle of extra-virgin olive oil, this bread embodies the artistry of nature's bounty in every bite.`],
     ],
     drinks: [
         ['Royal Elixir of Serendipity', '$135', drink1, 'A mesmerizing blend of rare botanicals and aged spices, infused with hints of ethereal mist. This exquisite elixir tantalizes the palate with a delicate balance of opulent flavors, reminiscent of a moonlit garden at the peak of bloom. Served in a crystal goblet adorned with shimmering gold leaf, it promises an unparalleled sensory journey.'],
@@ -39,6 +44,7 @@ const uiRendering = {
     },
     renderBoard: function() {
         this.loadSide(this.side);
+        this.loadFood(this.foods);
         this.loadDrink(this.drinks);
     },
     loadSide: function(side) {
@@ -47,10 +53,16 @@ const uiRendering = {
             this.createCard(dish[0], dish[1], dish[2], dish[3], 'Sides');
         });
     },
+    loadFood: function(food) {
+        this.createCardContainer('Foods');
+        food.forEach(dish => {
+            this.createCard(dish[0], dish[1], dish[2], dish[3], 'Foods');
+        });
+    },
     loadDrink: function(drinks) {
         this.createCardContainer('Drinks');
-        drinks.forEach(drink => {
-            this.createCard(drink[0], drink[1], drink[2], drink[3], 'Drinks');
+        drinks.forEach(dish => {
+            this.createCard(dish[0], dish[1], dish[2], dish[3], 'Drinks');
         });
     },
     createCardContainer: function(headingName) {
