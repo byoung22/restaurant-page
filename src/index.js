@@ -29,6 +29,6 @@ menu.addEventListener('click', () => {
 });
 const find = document.querySelector('#find');
 find.addEventListener('click', () => {
-    loadFind();
     removeContainer();
+    loadFind();
 });
