@@ -139,3 +139,37 @@ h2 {
 	padding-top: 65px;
 	gap: 16px;
 }
+
+@media only screen and (max-width: 768px) {
+	/*HEADER*/
+	#logo {
+		height: auto;
+		width: 80vw;
+	}
+	.header-button {
+		font-size: 20px;
+	}
+	/*MENU*/
+	.heading {
+		font-size: 35px;
+		margin: 15px;
+	}
+	.image {
+		height: 50vw;
+		width: 50vw;
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 9px;
+		margin: 20px 13px;
+	}
+	.info {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin: 5px 10px;
+	}
+}
