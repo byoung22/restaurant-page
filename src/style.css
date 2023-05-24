@@ -56,7 +56,7 @@ table {
     min-height: 100vh;
     width: 100vw;
 }
-
+/*HEADER*/
 #header {
 	padding: 20px 0px;
 
@@ -81,7 +81,7 @@ table {
 	font-size: 24px;
 	padding: 20;
 }
-
+/*HOMEPAGE*/
 .container {
 	display: flex;
 	gap: 20px;
@@ -100,5 +100,30 @@ h2 {
 	height: calc(100vh - 194px);
 	width: 100vw;
 	object-fit: cover;
-
+}
+/*MENU*/
+.card-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.heading {
+	font-size: 56px;
+	margin: 25px;
+}
+.image {
+	height: 375px;
+	width: 375px;
+}
+.info {
+	margin: 10px 20px;
+}
+.name {
+	margin: 0;
+}
+.card {
+	display: flex;
+	justify-content: center;
+	min-height: 395px;
 }

@@ -3,6 +3,7 @@ import './style.css';
 import loadHeader from './header';
 import loadAbout from './about';
 import removeContainer from './empty';
+import loadMenu from './menu';
 
 // Initialize
 function createContent() {
@@ -23,6 +24,7 @@ about.addEventListener('click', () => {
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', () => {
     removeContainer();
+    loadMenu();
 
 });
 const find = document.querySelector('#find');
