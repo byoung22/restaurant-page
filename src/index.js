@@ -4,6 +4,7 @@ import loadHeader from './header';
 import loadAbout from './about';
 import removeContainer from './empty';
 import loadMenu from './menu';
+import loadFind from './find';
 
 // Initialize
 function createContent() {
@@ -11,7 +12,6 @@ function createContent() {
     content.setAttribute('id', 'content');
     document.body.appendChild(content);
 }
-
 createContent();
 loadHeader();
 loadAbout();
@@ -29,6 +29,6 @@ menu.addEventListener('click', () => {
 });
 const find = document.querySelector('#find');
 find.addEventListener('click', () => {
+    loadFind();
     removeContainer();
-    
 });
